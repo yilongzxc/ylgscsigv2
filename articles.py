@@ -36,6 +36,7 @@ Clinical_Orthopedics_and_Trauma = Sci("https://www.journals.elsevier.com/journal
 Transplantation_Reviews = Sci("https://www.journals.elsevier.com/transplantation-reviews/recent-articles", "pod-listing-header")
 Transplantation_Reports = Sci("https://www.journals.elsevier.com/transplantation-reports/recent-articles", "pod-listing-header")
 Transplant_Immunology = Sci("https://www.journals.elsevier.com/transplant-immunology/recent-articles", "pod-listing-header")
+Journal_of_Heart_and_Lung_Transplantation = Sci("https://www.journals.elsevier.com/the-journal-of-heart-and-lung-transplantation/recent-articles", "pod-listing-header")
 
 # cd Desktop\python\python proj\yl sci
 # ylsci-env\Scripts\activate.bat
