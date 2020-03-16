@@ -30,6 +30,12 @@ Neurosurgery
 Hepato-Pancreato-Biliary
 /hepato_pancreato_biliary
 
+Transplantation
+/transplantation_reviews
+/transplantation_reports
+/transplant_immunology
+/journal_of_heart_and_lung_transplantation
+
 Orthopedics
 /clinical_orthopedics_trauma
 ''')
@@ -94,6 +100,46 @@ def send_Clinical_Orthopedics_and_Trauma(message):
 
 """ + Clinical_Orthopedics_and_Trauma_string(Clinical_Orthopedics_and_Trauma))
 
+@bot.message_handler(commands=['transplantation_reviews'])
+def send_Transplantation_Reviews(message):
+	Transplantation_Reviews = articles.Sci.site(articles.Transplantation_Reviews)
+	def Transplantation_Reviews_string(Transplantation_Reviews):
+	    Transplantation_Reviews_str = ""
+	    return Transplantation_Reviews_str.join(Transplantation_Reviews)
+	bot.reply_to(message, "Here are the latest articles from Transplantation Reviews:" + """
+
+""" + Transplantation_Reviews_string(Transplantation_Reviews))
+
+@bot.message_handler(commands=['transplantation_reports'])
+def send_Transplantation_Reports(message):
+	Transplantation_Reports = articles.Sci.site(articles.Transplantation_Reports)
+	def Transplantation_Reports_string(Transplantation_Reports):
+	    Transplantation_Reports_str = ""
+	    return Transplantation_Reports_str.join(Transplantation_Reports)
+	bot.reply_to(message, "Here are the latest articles from Transplantation Reports:" + """
+
+""" + Transplantation_Reports_string(Transplantation_Reports))
+
+@bot.message_handler(commands=['transplant_immunology'])
+def send_Transplant_Immunology(message):
+	Transplant_Immunology = articles.Sci.site(articles.Transplant_Immunology)
+	def Transplant_Immunology_string(Transplant_Immunology):
+	    Transplant_Immunology_str = ""
+	    return Transplant_Immunology_str.join(Transplant_Immunology)
+	bot.reply_to(message, "Here are the latest articles from Transplant Immunology:" + """
+
+""" + Transplant_Immunology_string(Transplant_Immunology))
+
+@bot.message_handler(commands=['journal_of_heart_and_lung_transplantation'])
+def send_Journal_of_Heart_and_Lung_Transplantation(message):
+	Journal_of_Heart_and_Lung_Transplantation = articles.Sci.site(articles.Journal_of_Heart_and_Lung_Transplantation)
+	def Journal_of_Heart_and_Lung_Transplantation_string(Journal_of_Heart_and_Lung_Transplantation):
+	    Journal_of_Heart_and_Lung_Transplantation_str = ""
+	    return Journal_of_Heart_and_Lung_Transplantation_str.join(Journal_of_Heart_and_Lung_Transplantation)
+	bot.reply_to(message, "Here are the latest articles from the Journal of Heart and Lung Transplantation:" + """
+
+""" + Journal_of_Heart_and_Lung_Transplantation_string(Journal_of_Heart_and_Lung_Transplantation)
+	
 while True:
     try:
         bot.polling()
