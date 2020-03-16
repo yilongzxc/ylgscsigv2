@@ -37,6 +37,7 @@ Transplant
 /transplantation_reviews
 /transplantation_reports
 /transplant_immunology
+/journal_of_heart_and_lung_transplantation
 
 ''')
 
@@ -130,6 +131,16 @@ def send_Transplant_Immunology(message):
 
 """ + Transplant_Immunology_string(Transplant_Immunology))
 
+@bot.message_handler(commands=['journal_of_heart_and_lung_transplantation'])
+def send_Journal_of_Heart_and_Lung_Transplantation(message):
+	Journal_of_Heart_and_Lung_Transplantation = articles.Sci.site(articles.Journal_of_Heart_and_Lung_Transplantation)
+	def Journal_of_Heart_and_Lung_Transplantation_string(Journal_of_Heart_and_Lung_Transplantation):
+	    Journal_of_Heart_and_Lung_Transplantation_str = ""
+	    return Journal_of_Heart_and_Lung_Transplantation_str.join(Journal_of_Heart_and_Lung_Transplantation)
+	bot.reply_to(message, "Here are the latest articles from the Journal of Heart and Lung Transplantation:" + """
+
+""" + Journal_of_Heart_and_Lung_Transplantation_string(Journal_of_Heart_and_Lung_Transplantation)
+	
 while True:
     try:
         bot.polling()
