@@ -20,6 +20,7 @@ General Surgical Journals:
 /surgery
 /american_journal_of_surgery
 /journal_of_surgical_research
+/journal_of_pediatric_surgery
 
 Specialised Surgical Journals:
 
@@ -82,6 +83,16 @@ def send_Journal_of_Surgical_Research(message):
 	bot.reply_to(message, "Here are the latest articles from the Journal of Surgical Research:" + """
 
 """ + Journal_of_Surgical_Research_string(Journal_of_Surgical_Research))
+
+@bot.message_handler(commands=['journal_of_pediatric_surgery'])
+def send_Journal_of_Pediatric_Surgery(message):
+	Journal_of_Pediatric_Surgery = articles.Sci.site(articles.Journal_of_Pediatric_Surgery)
+	def Journal_of_Pediatric_Surgery_string(Journal_of_Pediatric_Surgery):
+	    Journal_of_Pediatric_Surgery_str = ""
+	    return Journal_of_Pediatric_Surgery_str.join(Journal_of_Pediatric_Surgery)
+	bot.reply_to(message, "Here are the latest articles from the Journal of Pediatric Surgery:" + """
+
+""" + Journal_of_Pediatric_Surgery_string(Journal_of_Pediatric_Surgery))
 	
 @bot.message_handler(commands=['journal_of_vascular_surgery'])
 def send_Journal_of_Vascular_Surgery(message):
