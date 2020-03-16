@@ -26,11 +26,12 @@ Specialised Surgical Journals:
 
 CTVS
 /journal_of_vascular_surgery
-/annals_of_thoracic_surgery
 
 Neurosurgery
 /jnnp
 /world_neurosurgery
+/interdisciplinary_neurosurgery
+
 
 Hepato-Pancreato-Biliary
 /hepato_pancreato_biliary
@@ -104,16 +105,6 @@ def send_Journal_of_Vascular_Surgery(message):
 	bot.reply_to(message, "Here are the latest articles from Journal of Vascular Surgery:" + """
 
 """ + Journal_of_Vascular_Surgery_string(Journal_of_Vascular_Surgery))
-
-@bot.message_handler(commands=['annals_of_thoracic_surgery'])
-def send_Annals_of_Thoracic_Surgery(message):
-	Annals_of_Thoracic_Surgery = articles.Sci.site(articles.Annals_of_Thoracic_Surgery)
-	def Annals_of_Thoracic_Surgery_string(Annals_of_Thoracic_Surgery):
-	    Annals_of_Thoracic_Surgery_str = ""
-	    return Annals_of_Thoracic_Surgery_str.join(Annals_of_Thoracic_Surgery)
-	bot.reply_to(message, "Here are the latest articles from the Annals of Thoracic Surgery:" + """
-
-""" + Annals_of_Thoracic_Surgery_string(Annals_of_Thoracic_Surgery))
 	
 @bot.message_handler(commands=['jnnp'])
 def send_Journal_of_Neurology_Neurosurgery_and_Psychiatry(message):
@@ -135,6 +126,16 @@ def send_World_Neurosurgery(message):
 
 """ + World_Neurosurgery_string(World_Neurosurgery))
 
+@bot.message_handler(commands=['interdisciplinary_neurosurgery'])
+def send_Interdisciplinary_Neurosurgery(message):
+	Interdisciplinary_Neurosurgery = articles.Sci.site(articles.Interdisciplinary_Neurosurgery)
+	def Interdisciplinary_Neurosurgery_string(Interdisciplinary_Neurosurgery):
+	    Interdisciplinary_Neurosurgery_str = ""
+	    return Interdisciplinary_Neurosurgery_str.join(Interdisciplinary_Neurosurgery)
+	bot.reply_to(message, "Here are the latest articles from Interdisciplinary Neurosurgery:" + """
+
+""" + Interdisciplinary_Neurosurgery_string(Interdisciplinary_Neurosurgery))	
+	
 @bot.message_handler(commands=['hepato_pancreato_biliary'])
 def send_Annals_of_Hepato_Pancreato_Biliary_Surgery(message):
 	Annals_of_Hepato_Pancreato_Biliary_Surgery = base.Sci.site(base.Annals_of_Hepato_Pancreato_Biliary_Surgery)
