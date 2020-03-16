@@ -40,5 +40,7 @@ Surgery = Sci("https://www.journals.elsevier.com/surgery/recent-articles", "pod-
 American_Journal_of_Surgery = Sci("https://www.journals.elsevier.com/the-american-journal-of-surgery/recent-articles", "pod-listing-header")
 Journal_of_Surgical_Research = Sci("https://www.journals.elsevier.com/journal-of-surgical-research/recent-articles", "pod-listing-header")
 Journal_of_Pediatric_Surgery = Sci("https://www.journals.elsevier.com/journal-of-pediatric-surgery/recent-articles", "pod-listing-header")
+Annals_of_Thoracic_Surgery = Sci("journals.elsevier.com/the-annals-of-thoracic-surgery/recent-articles", "pod-listing-header")
+
 # cd Desktop\python\python proj\yl sci
 # ylsci-env\Scripts\activate.bat
