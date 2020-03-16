@@ -26,6 +26,7 @@ Specialised Surgical Journals:
 
 CTVS
 /journal_of_vascular_surgery
+/annals_of_thoracic_surgery
 
 Neurosurgery
 /jnnp
@@ -93,6 +94,16 @@ def send_Journal_of_Pediatric_Surgery(message):
 	bot.reply_to(message, "Here are the latest articles from the Journal of Pediatric Surgery:" + """
 
 """ + Journal_of_Pediatric_Surgery_string(Journal_of_Pediatric_Surgery))
+	
+@bot.message_handler(commands=['annals_of_thoracic_surgery'])
+def send_Annals_of_Thoracic_Surgery(message):
+	Annals_of_Thoracic_Surgery = articles.Sci.site(articles.Annals_of_Thoracic_Surgery)
+	def Annals_of_Thoracic_Surgery_string(Annals_of_Thoracic_Surgery):
+	    Annals_of_Thoracic_Surgery_str = ""
+	    return Annals_of_Thoracic_Surgery_str.join(Annals_of_Thoracic_Surgery)
+	bot.reply_to(message, "Here are the latest articles from the Annals of Thoracic Surgery:" + """
+
+""" + Annals_of_Thoracic_Surgery_string(Annals_of_Thoracic_Surgery))
 	
 @bot.message_handler(commands=['journal_of_vascular_surgery'])
 def send_Journal_of_Vascular_Surgery(message):
