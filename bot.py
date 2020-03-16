@@ -17,6 +17,7 @@ def send_help(message):
 
 General Surgical Journals:
 /jama_surgery
+/surgery
 
 Specialised Surgical Journals:
 
@@ -37,7 +38,6 @@ Transplant
 /transplantation_reviews
 /transplantation_reports
 /transplant_immunology
-/journal_of_heart_and_lung_transplantation
 
 ''')
 
@@ -50,6 +50,16 @@ def send_JAMA_Surgery(message):
 	bot.reply_to(message, "Here are the latest articles from JAMA Surgery:" + """
 
 """ + JAMA_Surgery_string(JAMA_Surgery))
+	
+@bot.message_handler(commands=['surgery'])
+def send_Surgery(message):
+	Surgery = articles.Sci.site(articles.Surgery)
+	def Surgery_string(Surgery):
+	    Surgery_str = ""
+	    return Surgery_str.join(Surgery)
+	bot.reply_to(message, "Here are the latest articles from Surgery:" + """
+
+""" + Surgery_string(Surgery))
 
 @bot.message_handler(commands=['journal_of_vascular_surgery'])
 def send_Journal_of_Vascular_Surgery(message):
