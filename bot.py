@@ -144,6 +144,8 @@ def send_Annals_of_Hepato_Pancreato_Biliary_Surgery(message):
 	    return Annals_of_Hepato_Pancreato_Biliary_Surgery_str.join(Annals_of_Hepato_Pancreato_Biliary_Surgery)
 	bot.reply_to(message, "Here are the latest articles from Annals of Hepato-Pancreato-Biliary Surgery:" + """
 
+""" + Annals_of_Hepato_Pancreato_Biliary_Surgery_string(Annals_of_Hepato_Pancreato_Biliary_Surgery))
+
 @bot.message_handler(commands=['clinical_neurology_and_neurosurgery'])
 def send_Clinical_Neurology_and_Neurosurgery(message):
 	Clinical_Neurology_and_Neurosurgery = articles.Sci.site(articles.Clinical_Neurology_and_Neurosurgery)
@@ -153,9 +155,7 @@ def send_Clinical_Neurology_and_Neurosurgery(message):
 	bot.reply_to(message, "Here are the latest articles from the Journal of Clinical Neurology and Neurosurgery:" + """
 
 """ + Clinical_Neurology_and_Neurosurgery_string(Clinical_Neurology_and_Neurosurgery))
-
-""" + Annals_of_Hepato_Pancreato_Biliary_Surgery_string(Annals_of_Hepato_Pancreato_Biliary_Surgery))
-
+	
 @bot.message_handler(commands=['clinical_orthopedics_trauma'])
 def send_Clinical_Orthopedics_and_Trauma(message):
 	Clinical_Orthopedics_and_Trauma = articles.Sci.site(articles.Clinical_Orthopedics_and_Trauma)
