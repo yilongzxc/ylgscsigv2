@@ -32,6 +32,10 @@ Hepato-Pancreato-Biliary
 
 Orthopedics
 /clinical_orthopedics_trauma
+
+Transplant 
+/transplantation_reviews
+
 ''')
 
 @bot.message_handler(commands=['jama_surgery'])
@@ -93,6 +97,16 @@ def send_Clinical_Orthopedics_and_Trauma(message):
 	bot.reply_to(message, "Here are the latest articles from World_Neurosurgery:" + """
 
 """ + Clinical_Orthopedics_and_Trauma_string(Clinical_Orthopedics_and_Trauma))
+
+@bot.message_handler(commands=['transplantation_reviews'])
+def send_Transplantation_Reviews(message):
+	Transplantation_Reviews = articles.Sci.site(articles.Transplantation_Reviews)
+	def Transplantation_Reviews_string(Transplantation_Reviews):
+	    Transplantation_Reviews_str = ""
+	    return Transplantation_Reviews_str.join(Transplantation_Reviews)
+	bot.reply_to(message, "Here are the latest articles from Transplantation Reviews:" + """
+
+""" + Transplantation_Reviews_string(Transplantation_Reviews))
 
 while True:
     try:
