@@ -18,6 +18,8 @@ def send_help(message):
 General Surgical Journals:
 /jama_surgery
 /surgery
+/american_journal_of_surgery
+/intl_journal_of_surgery
 
 Specialised Surgical Journals:
 
@@ -60,6 +62,26 @@ def send_Surgery(message):
 	bot.reply_to(message, "Here are the latest articles from Surgery:" + """
 
 """ + Surgery_string(Surgery))
+
+@bot.message_handler(commands=['american_journal_of_surgery'])
+def send_American_Journal_of_Surgery(message):
+	American_Journal_of_Surgery = articles.Sci.site(articles.American_Journal_of_Surgery)
+	def American_Journal_of_Surgery_string(American_Journal_of_Surgery):
+	    American_Journal_of_Surgery_str = ""
+	    return American_Journal_of_Surgery_str.join(American_Journal_of_Surgery)
+	bot.reply_to(message, "Here are the latest articles from the American Journal of Surgery:" + """
+
+""" + American_Journal_of_Surgery_string(American_Journal_of_Surgery))
+
+@bot.message_handler(commands=['intl_journal_of_surgery'])
+def send_Intl_Journal_of_Surgery(message):
+	Intl_Journal_of_Surgery = base.Sci.site(base.Intl_Journal_of_Surgery)
+	def Intl_Journal_of_Surgery_string(Intl_Journal_of_Surgery):
+	    Intl_Journal_of_Surgery_str = ""
+	    return Intl_Journal_of_Surgery_str.join(Intl_Journal_of_Surgery)
+	bot.reply_to(message, "Here are the latest articles from the International Journal of Surgery:" + """
+
+""" + Intl_Journal_of_Surgery_string(Intl_Journal_of_Surgery))
 
 @bot.message_handler(commands=['journal_of_vascular_surgery'])
 def send_Journal_of_Vascular_Surgery(message):
