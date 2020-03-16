@@ -35,9 +35,11 @@ Neurosurgery
 
 Hepato-Pancreato-Biliary
 /annals_of_hepato_pancreato_biliary
+/hpb
 
 Orthopedics
 /clinical_orthopedics_trauma
+/orthopedics_and_trauma
 
 Transplant 
 /transplantation_reviews
@@ -146,6 +148,16 @@ def send_Annals_of_Hepato_Pancreato_Biliary_Surgery(message):
 
 """ + Annals_of_Hepato_Pancreato_Biliary_Surgery_string(Annals_of_Hepato_Pancreato_Biliary_Surgery))
 
+@bot.message_handler(commands=['hpb'])
+def send_HPB(message):
+	HPB = articles.Sci.site(articles.HPB)
+	def HPB_string(HPB):
+	    HPB_str = ""
+	    return HPB_str.join(HPB)
+	bot.reply_to(message, "Here are the latest articles from HPB:" + """
+
+""" + HPB_string(HPB))	
+	
 @bot.message_handler(commands=['clinical_neurology_and_neurosurgery'])
 def send_Clinical_Neurology_and_Neurosurgery(message):
 	Clinical_Neurology_and_Neurosurgery = articles.Sci.site(articles.Clinical_Neurology_and_Neurosurgery)
@@ -165,6 +177,16 @@ def send_Clinical_Orthopedics_and_Trauma(message):
 	bot.reply_to(message, "Here are the latest articles from World_Neurosurgery:" + """
 
 """ + Clinical_Orthopedics_and_Trauma_string(Clinical_Orthopedics_and_Trauma))
+
+@bot.message_handler(commands=['orthopedics_and_trauma'])
+def send_Orthopedics_and_Trauma(message):
+	Orthopedics_and_Trauma = articles.Sci.site(articles.Orthopedics_and_Trauma)
+	def Orthopedics_and_Trauma_string(Orthopedics_and_Trauma):
+	    Orthopedics_and_Trauma_str = ""
+	    return Orthopedics_and_Trauma_str.join(Orthopedics_and_Trauma)
+	bot.reply_to(message, "Here are the latest articles from Orthopedics and Trauma:" + """
+
+""" + Orthopedics_and_Trauma_string(Orthopedics_and_Trauma))
 
 @bot.message_handler(commands=['transplantation_reviews'])
 def send_Transplantation_Reviews(message):
