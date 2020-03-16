@@ -22,7 +22,7 @@ General Surgical Journals:
 /journal_of_surgical_research
 /journal_of_pediatric_surgery
 
-Specialised Surgical Journals:
+Sub-specialty Surgical Journals:
 
 CTVS
 /journal_of_vascular_surgery
@@ -31,10 +31,10 @@ Neurosurgery
 /jnnp
 /world_neurosurgery
 /interdisciplinary_neurosurgery
-
+/clinical_neurology_and_neurosurgery
 
 Hepato-Pancreato-Biliary
-/hepato_pancreato_biliary
+/annals_of_hepato_pancreato_biliary
 
 Orthopedics
 /clinical_orthopedics_trauma
@@ -136,13 +136,23 @@ def send_Interdisciplinary_Neurosurgery(message):
 
 """ + Interdisciplinary_Neurosurgery_string(Interdisciplinary_Neurosurgery))	
 	
-@bot.message_handler(commands=['hepato_pancreato_biliary'])
+@bot.message_handler(commands=['annals_of_hepato_pancreato_biliary'])
 def send_Annals_of_Hepato_Pancreato_Biliary_Surgery(message):
 	Annals_of_Hepato_Pancreato_Biliary_Surgery = base.Sci.site(base.Annals_of_Hepato_Pancreato_Biliary_Surgery)
 	def Annals_of_Hepato_Pancreato_Biliary_Surgery_string(Annals_of_Hepato_Pancreato_Biliary_Surgery):
 	    Annals_of_Hepato_Pancreato_Biliary_Surgery_str = ""
 	    return Annals_of_Hepato_Pancreato_Biliary_Surgery_str.join(Annals_of_Hepato_Pancreato_Biliary_Surgery)
-	bot.reply_to(message, "Here are the latest articles from Annals_of_Hepato_Pancreato_Biliary_Surgery:" + """
+	bot.reply_to(message, "Here are the latest articles from Annals of Hepato-Pancreato-Biliary Surgery:" + """
+
+@bot.message_handler(commands=['clinical_neurology_and_neurosurgery'])
+def send_Clinical_Neurology_and_Neurosurgery(message):
+	Clinical_Neurology_and_Neurosurgery = articles.Sci.site(articles.Clinical_Neurology_and_Neurosurgery)
+	def Clinical_Neurology_and_Neurosurgery_string(Clinical_Neurology_and_Neurosurgery):
+	    Clinical_Neurology_and_Neurosurgery_str = ""
+	    return Clinical_Neurology_and_Neurosurgery_str.join(Clinical_Neurology_and_Neurosurgery)
+	bot.reply_to(message, "Here are the latest articles from the Journal of Clinical Neurology and Neurosurgery:" + """
+
+""" + Clinical_Neurology_and_Neurosurgery_string(Clinical_Neurology_and_Neurosurgery))
 
 """ + Annals_of_Hepato_Pancreato_Biliary_Surgery_string(Annals_of_Hepato_Pancreato_Biliary_Surgery))
 
