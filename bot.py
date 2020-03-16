@@ -35,6 +35,8 @@ Orthopedics
 
 Transplant 
 /transplantation_reviews
+/transplantation_reports
+/transplant_immunology
 
 ''')
 
@@ -107,6 +109,26 @@ def send_Transplantation_Reviews(message):
 	bot.reply_to(message, "Here are the latest articles from Transplantation Reviews:" + """
 
 """ + Transplantation_Reviews_string(Transplantation_Reviews))
+
+@bot.message_handler(commands=['transplantation_reports'])
+def send_Transplantation_Reports(message):
+	Transplantation_Reports = articles.Sci.site(articles.Transplantation_Reports)
+	def Transplantation_Reports_string(Transplantation_Reports):
+	    Transplantation_Reports_str = ""
+	    return Transplantation_Reports_str.join(Transplantation_Reports)
+	bot.reply_to(message, "Here are the latest articles from Transplantation Reports:" + """
+
+""" + Transplantation_Reports_string(Transplantation_Reports))
+
+@bot.message_handler(commands=['transplant_immunology'])
+def send_Transplant_Immunology(message):
+	Transplant_Immunology = articles.Sci.site(articles.Transplant_Immunology)
+	def Transplant_Immunology_string(Transplant_Immunology):
+	    Transplant_Immunology_str = ""
+	    return Transplant_Immunology_str.join(Transplant_Immunology)
+	bot.reply_to(message, "Here are the latest articles from Transplant Immunology:" + """
+
+""" + Transplant_Immunology_string(Transplant_Immunology))
 
 while True:
     try:
