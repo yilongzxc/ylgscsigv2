@@ -34,6 +34,8 @@ Journal_of_Vascular_Surgery = Sci("https://www.journals.elsevier.com/journal-of-
 World_Neurosurgery = Sci("https://www.journals.elsevier.com/world-neurosurgery-x/recent-articles", "pod-listing-header")
 Clinical_Orthopedics_and_Trauma = Sci("https://www.journals.elsevier.com/journal-of-clinical-orthopaedics-and-trauma/recent-articles", "pod-listing-header")
 Transplantation_Reviews = Sci("https://www.journals.elsevier.com/transplantation-reviews/recent-articles", "pod-listing-header")
+Transplantation_Reports = Sci("https://www.journals.elsevier.com/transplantation-reports/recent-articles", "pod-listing-header")
+Transplant_Immunology = Sci("https://www.journals.elsevier.com/transplant-immunology/recent-articles", "pod-listing-header")
 
 # cd Desktop\python\python proj\yl sci
 # ylsci-env\Scripts\activate.bat
