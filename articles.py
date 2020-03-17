@@ -43,6 +43,6 @@ Journal_of_Pediatric_Surgery = Sci("https://www.journals.elsevier.com/journal-of
 Interdisciplinary_Neurosurgery = Sci("https://www.journals.elsevier.com/interdisciplinary-neurosurgery/recent-articles", "pod-listing-header")
 Clinical_Neurology_and_Neurosurgery = Sci("https://www.journals.elsevier.com/clinical-neurology-and-neurosurgery/recent-articles", "pod-listing-header")
 HPB = Sci("https://www.journals.elsevier.com/hpb/recent-articles", "pod-listing-header")
-
+AnnalsofSurgery = Sci("https://journals.lww.com/annalsofsurgery/pages/viewallmostpopulararticles.aspx?WT.mc_id=HPxADx20100319xMP", "pod-listing-header")
 # cd Desktop\python\python proj\yl sci
 # ylsci-env\Scripts\activate.bat
