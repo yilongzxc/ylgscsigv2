@@ -21,7 +21,6 @@ General Surgical Journals:
 /american_journal_of_surgery
 /journal_of_surgical_research
 /journal_of_pediatric_surgery
-/annals_of_surgery
 
 Sub-specialty Surgical Journals:
 
@@ -67,16 +66,6 @@ def send_Surgery(message):
 	bot.reply_to(message, "Here are the latest articles from Surgery:" + """
 
 """ + Surgery_string(Surgery))
-	
-@bot.message_handler(commands=['annals_of_surgery'])
-def send_AnnalsofSurgery(message):
-	AnnalsofSurgery = articles.Sci.site(articles.AnnalsofSurgery)
-	def AnnalsofSurgery_string(AnnalsofSurgery):
-	    AnnalsofSurgery_str = ""
-	    return AnnalsofSurgery_str.join(AnnalsofSurgery)
-	bot.reply_to(message, "Here are the latest articles from Surgery:" + """
-
-""" + AnnalsofSurgery_string(AnnalsofSurgery))
 
 @bot.message_handler(commands=['american_journal_of_surgery'])
 def send_American_Journal_of_Surgery(message):
